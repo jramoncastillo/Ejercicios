@@ -1,0 +1,75 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+
+}
+.btn{
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: 200px;
+    height: 60px;
+    background: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    padding-left: 40px;
+    border: 1px solid blue;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.btn::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    transform: translateX(-170px) skew(30deg);
+    transition: 0.75s ease-in-out
+}
+.btn:hover::after{
+    transform: translateX(170px) skew(30deg);
+    
+}
+.btn:hover{
+    padding-left: 0;
+    padding-right: 40px;
+}
+.btn span{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5 ease-in-out;
+}
+.btn:hover span {
+    left: calc(100% - 55px);
+    background-color: black;
+}
+.svg{
+    width: 25px;
+    height: 25px;
+    fill: white;
+}
+.btn:hover .svg {
+    fill: blue;
+}
+    
